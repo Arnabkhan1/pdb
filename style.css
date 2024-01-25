@@ -1,0 +1,304 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    height: 100%; 
+}
+@media screen and (max-width:575px){
+    .pdb-portfolio-first-view h1{
+        text-align: end;
+        font-size:7.25vw;
+        margin-top:4vh;
+        position: absolute;
+        z-index:9;
+        left:2vw;
+        text-transform: uppercase;
+        /* color:white; */
+    }
+    .pdb-portfolio-first-view video{
+        width: 100vw;
+        /* height:100vh; */
+        z-index: -99;
+    }
+    .pdb-portfolio-first-view img{
+        position: absolute;
+        z-index:20;
+        width: 50vw;
+        height: 28vh;
+         top:18vh; 
+         left: 0; 
+         border-radius: 40px 30px / 100px; 
+       
+    }
+    #pdb-portfolio-first-view-button{
+      position: absolute;
+      width: 50vw;
+      height: 6vh;
+      top: 70vh;
+      left:3.5vw;
+      border-radius: 20px;
+      font-size: 1.25rem;
+      cursor: pointer;
+    }
+    .fb-button {
+        position: fixed;
+        width:21vw;
+        height:10vh;
+        top: 85vh;
+        right: 2em;
+        background-color: #fff; /* Gmail color */
+        box-shadow: inset 1px 1px 5px 2px #000;
+        border-radius: 50%;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        z-index:99;
+    }
+    .fb-button:hover {
+        background-color: #fff; /* Darker shade on hover */
+        scale: 1.2;
+    }
+    .fb-button i {
+        color: #81b8ff; /* Icon color */
+        font-size: 24px; /* Adjust the font size */
+    }
+    .fb-button img {
+        width: 3em; /* Adjust the image width */
+        height:6em; /* Adjust the image height */
+        border-radius: 0.3em;
+        background-color: #81b6ff;
+        transition: all 0.5s ease-in-out;
+    }
+    .fb-button img:hover {
+        scale: 1.03;
+    } 
+    
+      .checkbox {
+        display: none;
+      }
+      
+      .button {
+        position: relative;
+        background-color: white;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 2vh; 
+        right: 5vw; 
+        z-index: 2000;
+        box-shadow: 0 1rem 1rem black;
+        text-align: center; 
+        cursor: pointer;
+      }
+      
+      .background {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 2.5vh; 
+        right: 5.5vw; 
+        background-image: radial-gradient(green, black);
+        z-index: 1000;
+      
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      .nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -60vw;
+        z-index: 1500;
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s;
+      }
+      
+      .list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        width: 100%;
+      }
+      
+      .item {
+        margin: 3rem;
+        font-size: 36px;
+      }
+      
+      .link:link,
+      .link:visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          white 50%
+        );
+        background-size: 220%;
+        transition: all 0.4s;
+      }
+      
+      .link:hover,
+      .link:active {
+        color: lightgreen;
+        cursor: pointer;
+      }
+      
+      /* functionality */
+      .checkbox:checked ~ .background {
+        transform: scale(80);
+      }
+      .checkbox:checked ~ .nav {
+        opacity: 1;
+        width: 100%;
+        right: 0;
+      }
+      
+      /*  */
+      /* styling hamb ICON */
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .icon,
+      .icon::before,
+      .icon::after {
+        width: 2rem;
+        height: 2px;
+        background-color: gray;
+        display: inline-block;
+      }
+      
+      .icon::before,
+      .icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+      }
+      
+      .icon::before {
+        top: -0.8rem;
+      }
+      .icon::after {
+        top: 0.8rem;
+      }
+      
+      .button:hover icon:before {
+        top: -1rem;
+      }
+      .button:hover icon::after {
+        top: 1rem;
+      }
+      
+      .checkbox:checked + .button .icon {
+        background-color: transparent;
+      }
+      
+      .checkbox:checked + .button .icon::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+      .checkbox:checked + .button .icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+      .pdb-portfolio-second-view h1{
+        text-align:center;
+        font-size:2rem;
+        padding: 2.5vh;
+      }
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius:30px;
+        margin-right: 5vw;
+        background-color: rgb(239, 198, 198);
+        margin-top: 1vh;
+      }
+      .swiper-slide p{
+        margin:2vh 4vw 0 4vw;
+        text-align: justify;
+        font-size:1.25rem;
+        line-height: 4vh;
+        padding-bottom: 2vh;
+      }
+  .swiper-slide h1{
+    padding-top: 2vh;
+  }
+      .swiper-slide{
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+       
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+      .pdb-portfolio-third-view h1{
+         text-align: center;
+      }
+      .pdb-portfolio-third-view h1{
+        font-size: 2rem;
+        margin-top: 2vh;
+      }
+      .pdb-portfolio-third-view p{
+        font-size:1.45rem;
+       margin: 2vh 2.25vw 0 2.25vw;
+        text-align: justify;
+        line-height: 4.5vh;
+      }
+      .swiper2 {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .swiper-slide2 {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper-slide2 img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .pdb-portfolio-fourth-view-socialicon{
+          display:  flex;
+          gap:15vw;
+          padding-left: 10vw;
+          margin-top: 3vh;
+      }
+      .pdb-portfolio-fourth-view-socialicon  a{
+        color: rgb(6, 5, 5);
+      }
+}
